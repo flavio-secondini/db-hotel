@@ -14,7 +14,7 @@ var app = new Vue ({
   },
   methods: {
     selezioneStanza: function (id) {
-      axios.get('http://localhost/db-hotel/api/stanze.php?id=${id}')
+      axios.get('http://localhost/db-hotel/api/stanze.php?id='+id)
       .then((response) => {
         this.stanza = response.data.response;
       });

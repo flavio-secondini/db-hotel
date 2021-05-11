@@ -13,29 +13,29 @@
       <thead>
         <tr>
           <th>ID</th>
-          <th>Numero Stanza</th>
+          <th>Numero stanza</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="stanza in stanze">
           <td>{{stanza.id}}</td>
-          <td @click="selezioneStanza(stanza.id)">{{stanza.room_number}}</td>
+          <td><button @click="selezioneStanza(stanza.id)">{{stanza.room_number}}</button></td>
         </tr>
       </tbody>
     </table>
 
     <div v-if="stanza">
-      <div>
-        <h2>ID {{stanza.id}}</h2>
+      <div v-for="obj in stanza">
+        <h2>Id: {{obj.id}}</h2>
       </div>
-      <div>
-        <h2>Numero stanza {{stanza.room_number}}</h2>
+      <div v-for="obj in stanza">
+        <h2>Numero stanza: {{obj.room_number}}</h2>
       </div>
-      <div>
-        <h2>Piano {{stanza.floor}}</h2>
+      <div v-for="obj in stanza">
+        <h2>Piano: {{obj.floor}}</h2>
       </div>
-      <div>
-        <h2>Letti {{stanza.beds}}</h2>
+      <div v-for="obj in stanza">
+        <h2>Letti: {{obj.beds}}</h2>
       </div>
     </div>
 
